@@ -2,7 +2,7 @@ export default {
 	// Global page headers (https://go.nuxtjs.dev/config-head)
 	head: {
 		title: 'NTT-Template',
-
+		target: 'static',
 		meta: [
 			{ charset: 'utf-8' },
 			{
@@ -25,10 +25,8 @@ export default {
 	css: [],
 
 	// Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-	plugins: [
-		{ src: '@/plugins/vue-tippy', ssr: true },
-		{ src: '@/plugins/v-click-outside', ssr: true },
-	],
+	plugins: ['~/plugins/preview.client.js'],
+
 
 	// Auto import components (https://go.nuxtjs.dev/config-components)
 	components: true,
@@ -38,6 +36,8 @@ export default {
 		// https://go.nuxtjs.dev/tailwindcss
 		'@nuxtjs/tailwindcss',
 		'nuxt-compress',
+		
+
 	],
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
@@ -45,7 +45,8 @@ export default {
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
 		// https://go.nuxtjs.dev/pwa
-		'@nuxtjs/pwa',
+	
+		'@nuxtjs/sanity/module',
 
 		[
 			'nuxt-compress',
@@ -71,33 +72,11 @@ export default {
 	// GSAP
 
 	// Global page transition
-	pageTransition: {
-		name: 'page',
-		mode: 'out-in',
-		css: false,
-
-		beforeEnter(el) {
-			this.$gsap.set(el, {
-				opacity: 0,
-			})
-		},
-
-		enter(el, done) {
-			this.$gsap.to(el, {
-				opacity: 1,
-				duration: 0.3,
-				ease: 'power2.inOut',
-				onComplete: done,
-			})
-		},
-
-		leave(el, done) {
-			this.$gsap.to(el, {
-				opacity: 0,
-				duration: 0.3,
-				ease: 'power2.inOut',
-				onComplete: done,
-			})
-		},
+	
+sanity: {
+	projectId: '1f2vyuv5',
+	dataset:'production',
+	minimal: true,
+	useCdn: false,
 	},
 }
