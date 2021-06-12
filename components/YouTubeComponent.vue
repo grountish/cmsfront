@@ -1,6 +1,6 @@
 <template>
 <div>
-<h3>{{youtubeLink}}</h3>
+
   <iframe class=" w-full h-84"
     :src="youtubeLink"
     frameborder="0"
