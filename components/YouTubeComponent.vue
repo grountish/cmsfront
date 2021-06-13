@@ -13,10 +13,10 @@
 <script>
 export default {
   name: 'YouTubeComponent',
-  props: ['url','size'],
+  props: ['seoString','size'],
   computed: {
     youtubeLink() {
-      let id = this.url.split('https://www.youtube.com/watch?v=')[1]
+      let id = this.seoString.split('https://www.youtube.com/watch?v=')[1]
       return `https://www.youtube.com/embed/` + id
     },
     returnSize(){

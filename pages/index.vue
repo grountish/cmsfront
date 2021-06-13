@@ -21,6 +21,7 @@ import heroComponent from "../components/heroComponent";
 import textCallImgComponent from "../components/textCallImgComponent";
 import richTextComponent from '../components/richTextComponent.vue';
 import marqueeComponent from '../components/marqueeComponent.vue';
+import blockHightlightComponent from '../components/blockHightlightComponent.vue';
 const query = groq`*[_type=="Page"]`;
 
 export default {
@@ -34,7 +35,8 @@ export default {
           hero: heroComponent,
           textCallImg:textCallImgComponent,
           richText:richTextComponent,
-          marquee:marqueeComponent
+          marquee:marqueeComponent,
+          blockHighlight:blockHightlightComponent
          
         },
         marks: {

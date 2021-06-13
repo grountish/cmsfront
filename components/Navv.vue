@@ -52,7 +52,7 @@
               :to="'/x/' + lin.name"
               >{{ lin.name }}</NuxtLink
             >
-            <span class="hidden lg:inline-block">|</span>
+           
           </li>
         </div>
       

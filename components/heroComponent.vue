@@ -1,6 +1,6 @@
 <template>
 	<div
-		class="container w-screen h-screen fadeIn grid place-items-center"
+		class="container w-screen min-w-full h-screen fadeIn grid place-items-center"
 		:style="{
 			backgroundImage: 'url(' + urlFor(background.asset._ref) + ')',
 		}"
