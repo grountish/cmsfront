@@ -37,7 +37,7 @@
       ]"
       id="nav-content"
     >
-      <ul
+      <ul id="link-list"
         :class="[
           linkse ? ' opacity-100 ' : ' opacity-0 sm:hidden  ',
           'pt-4 lg:pt-0 lg:opacity-100 list-reset lg:flex justify-end flex-1 items-center uppercase text-xs text-PrimaryGreen',
@@ -45,10 +45,10 @@
       >
        
 
-        <div v-for="lin in xtraLinks" :key="lin.name">
+        <div v-for="(lin,ind) in xtraLinks" :key="lin.name">
           <li class="mr-3">
             <NuxtLink
-              class="inline-block px-4 py-2 no-underline transition-all duration-200 hover:text-green-900"
+              :class="[ind==0?'opacity-0':'inline-block px-4 py-2 no-underline transition-all duration-200 hover:text-green-900']"
               :to="'/x/' + lin.name"
               >{{ lin.name }}</NuxtLink
             >
@@ -84,16 +84,15 @@ export default {
   },
   async fetch() {
     const xtraLinks = await this.$sanity.fetch(query);
-    this.xtraLinks = xtraLinks.slice(1);
+    this.xtraLinks = xtraLinks;
   },
   
 };
 </script>
 
 <style>
-nav * {
-  font-family: "Space Grotesk", sans-serif;
-}
+/* #link-list :first-child{
+display: none;} */
 #nav-content {
   transition: all 0.31s;
 }
