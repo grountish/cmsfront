@@ -24,6 +24,7 @@ import marqueeComponent from '../../components/marqueeComponent.vue';
 const query = groq`*[_type=="Page"]`;
 
 export default {
+ 
   data() {
     return {
       serializers: {

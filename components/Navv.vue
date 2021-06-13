@@ -5,7 +5,7 @@
     <div class="flex items-center flex-shrink-0 mr-6 text-white">
       <NuxtLink
         class="text-black no-underline logo hover:text-PrimaryGreen hover:no-underline"
-        to="/x/index"
+        to="/"
       >
         <span class="pl-2 text-2xl font-bold"
           ><i class="em em-grinning"></i> Home</span
@@ -84,7 +84,7 @@ export default {
   },
   async fetch() {
     const xtraLinks = await this.$sanity.fetch(query);
-    this.xtraLinks = xtraLinks;
+    this.xtraLinks = xtraLinks.slice(1);
   },
   
 };
