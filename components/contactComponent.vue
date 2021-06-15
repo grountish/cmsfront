@@ -31,13 +31,13 @@
         
       </div>
     </form>
-    <form >
+    <!-- <form >
   <label for="fname">First name:</label>
   <input type="text" id="fname" name="fname"><br><br>
   <label for="lname">Last name:</label>
   <input type="text" id="lname" name="lname"><br><br>
   <input type="button" value="Send form data!">
-</form>
+</form> -->
   </div>
 </section>
 </template>
