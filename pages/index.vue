@@ -1,5 +1,5 @@
 <template>
-  <div class="grid  place-items-center grid-cols-1">
+  <div class="grid grid-cols-1 place-items-center">
 
     
       <SanityContent
@@ -22,6 +22,7 @@ import textCallImgComponent from "../components/textCallImgComponent";
 import richTextComponent from '../components/richTextComponent.vue';
 import marqueeComponent from '../components/marqueeComponent.vue';
 import blockHightlightComponent from '../components/blockHightlightComponent.vue';
+import contactComponent from '../components/contactComponent.vue';
 const query = groq`*[_type=="Page"]`;
 
 export default {
@@ -36,7 +37,8 @@ export default {
           textCallImg:textCallImgComponent,
           richText:richTextComponent,
           marquee:marqueeComponent,
-          blockHighlight:blockHightlightComponent
+          blockHighlight:blockHightlightComponent,
+          contact:contactComponent
          
         },
         marks: {

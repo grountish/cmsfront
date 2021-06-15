@@ -1,9 +1,9 @@
 <template>
-  <div class="container m-auto flex flex-col md:flex-row fadeIn max-w-xl">
-    <div class="flex flex-col w-full lg:w-1/2 justify-center items-start py-8">
-      <SanityContent :blocks="text" class=" text-lg w-2/3 mx-auto text-center" />
+  <div class="container flex flex-col max-w-xl m-auto md:flex-row fadeIn">
+    <div class="flex flex-col items-start justify-center w-full py-8 lg:w-1/2">
+      <SanityContent :blocks="text" class="w-2/3 mx-auto text-lg text-center " />
 
-      <NuxtLink :to="button.link" class="m-auto p-4 border my-5 border-black">
+      <NuxtLink :to="button.link" class="p-4 m-auto my-5 border border-black">
         {{ button.text }}
       </NuxtLink>
     </div>

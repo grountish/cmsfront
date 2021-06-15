@@ -1,19 +1,19 @@
 <template>
 	<div
-		class="container w-screen min-w-full h-screen fadeIn grid place-items-center"
+		class="container grid w-screen h-screen min-w-full fadeIn place-items-center"
 		:style="{
 			backgroundImage: 'url(' + urlFor(background.asset._ref) + ')',
 		}"
 	>
 	
 		<div
-			class="flex flex-col w-full lg:w-2/3 text-center justify-center items-start pt-12 pb-24 px-6"
+			class="flex flex-col items-start justify-center w-full px-6 pt-12 pb-24 text-center lg:w-2/3"
 		>
 			<SanityContent :blocks="text" class="text-2xl" />
 
 			<a
 				:href="button.link"
-				class="m-auto p-4 border my-5 scaleUp border-black"
+				class="p-4 m-auto my-5 border border-black scaleUp"
 			>
 				{{ button.text }}
 			</a>
