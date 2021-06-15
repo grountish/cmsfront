@@ -36,6 +36,7 @@
   <label for="lname">Last name:</label>
   <input type="text" id="lname" name="lname"><br><br>
   <input type="button" value="Send form data!">
+  <input type="submit" value="submit">
 </form>
   </div>
 </section>
