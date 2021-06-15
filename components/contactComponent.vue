@@ -4,7 +4,7 @@
     <div class="flex flex-col w-full mb-12 text-center">
      <SanityContent :blocks="content" />
     </div>
-    <form action="/" method="POST" name="myForm"  class="mx-auto lg:w-1/2 md:w-2/3"  netlify>
+    <form action="POST" class="mx-auto lg:w-1/2 md:w-2/3"  >
       <div class="flex flex-wrap -m-2">
         <div class="w-1/2 p-2">
           <div class="relative">
@@ -25,19 +25,19 @@
           </div>
         </div>
         <div class="w-full p-2">
-          <button >Send</button>
-  <input type="submit" class="flex p-4 px-8 py-2 mx-auto my-5 border border-black scaleUpk" value="Send">
+          <button class="flex p-4 px-8 py-2 mx-auto my-5 border border-black scaleUpk">Send</button>
         </div>
         
       </div>
     </form>
-    <!-- <form >
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="button" value="Send form data!">
-</form> -->
+    <form action="/" method="POST" name="myForm" netlify>
+  <label class="text-sm leading-7 text-gray-600">Name</label>
+  <input type="text" id="fname" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" name="fname"><br><br>
+  <label class="text-sm leading-7 text-gray-600" for="lname">Last name:</label>
+  <input class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" type="text" id="lname" name="lname"><br><br>
+  <!-- <input class="text-sm leading-7 text-gray-600" type="button" value="Send form data!"> -->
+  <input class="text-sm leading-7 text-gray-600" type="submit" value="submit">
+</form>
   </div>
 </section>
 </template>
