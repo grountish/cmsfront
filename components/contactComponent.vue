@@ -4,7 +4,7 @@
     <div class="flex flex-col w-full mb-12 text-center">
      <SanityContent :blocks="content" />
     </div>
-    <form class="mx-auto lg:w-1/2 md:w-2/3" netlify>
+    <form class="mx-auto lg:w-1/2 md:w-2/3" data-netlify="true">
       <div class="flex flex-wrap -m-2">
         <div class="w-1/2 p-2">
           <div class="relative">
