@@ -4,7 +4,7 @@
     <div class="flex flex-col w-full mb-12 text-center">
      <SanityContent :blocks="content" />
     </div>
-    <form action="POST" class="mx-auto lg:w-1/2 md:w-2/3"  name="myForm" netlify>
+    <form action="POST" class="mx-auto lg:w-1/2 md:w-2/3"  >
       <div class="flex flex-wrap -m-2">
         <div class="w-1/2 p-2">
           <div class="relative">
@@ -30,6 +30,13 @@
         
       </div>
     </form>
+    <form action="/" method="POST" name="myForm" netlify>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname"><br><br>
+  <input type="button" value="Send form data!">
+</form>
   </div>
 </section>
 </template>
