@@ -60,12 +60,12 @@
 				</div>
 			</form> -->
 			<form action="/" method="POST" name="myForm" netlify>
-				<label class="text-sm leading-7 text-gray-600">Name</label>
+				<label for="name" class="text-sm leading-7 text-gray-600">Name</label>
 				<input
 					type="text"
-					id="fname"
+					id="name"
 					class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
-					name="fname"
+					name="name"
 				/><br /><br />
 				<label class="text-sm leading-7 text-gray-600" for="lname"
 					>Last name:</label
