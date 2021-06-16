@@ -4,7 +4,7 @@
 			<div class="flex flex-col w-full mb-12 text-center">
 				<SanityContent :blocks="content" />
 			</div>
-			<!-- <form action="POST" class="mx-auto lg:w-1/2 md:w-2/3">
+			 <!-- <form action="POST" class="mx-auto lg:w-1/2 md:w-2/3">
 				<div class="flex flex-wrap -m-2">
 					<div class="w-1/2 p-2">
 						<div class="relative">
@@ -58,8 +58,8 @@
 						</button>
 					</div>
 				</div>
-			</form> -->
-			<!-- <form action="/" method="POST" name="myForm" netlify>
+			</form> 
+			 <form action="/" method="POST" name="myForm" netlify>
 				<label for="name" class="text-sm leading-7 text-gray-600">Name</label>
 				<input
 					type="text"
@@ -76,21 +76,25 @@
 					id="lname"
 					name="lname"
 				/><br /><br />
-        <!-- <label for="lmessage"  class="text-sm leading-7 text-gray-600">Message</label>
-            <textarea id="lmessage" name="lmessage" class="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"></textarea> -->
-				<!-- <input class="text-sm leading-7 text-gray-600" type="button" value="Send form data!"> -->
-				<!-- <input
+        <label for="lmessage"  class="text-sm leading-7 text-gray-600">Message</label>
+            <textarea id="lmessage" name="lmessage" class="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"></textarea> 
+				 <input class="text-sm leading-7 text-gray-600" type="button" value="Send form data!"> 
+			<input
 					class="px-5 py-1 m-3 text-white transition-all duration-500 bg-black rounded-md hover:border-black hover:shadow hover:bg-white hover:text-black focus:text-gray-800"
 					type="submit"
 					value="submit"
 				/>
-			</form> --> 
+			</form>  -->
+
+
+
+			
 			<form action="/" method="get" name="phorm" netlify>
   <label for="fname">First name:</label>
   <input type="text" id="fname" name="fname"><br><br>
   <label for="lname">Last name:</label>
   <input type="text" id="lname" name="lname"><br><br>
-  <input type="button"  value="Send">
+  <input type="submit" class="p-5 border border-black" value="Send">
 </form>
 		</div>
 	</section>
