@@ -101,11 +101,11 @@
 					>Last name:</label
 				>
 				<input type="text" id="lname" name="lname" /><br /><br />
-				<label for="mes" class="text-sm leading-7 text-gray-600"
+				<label for="message" class="text-sm leading-7 text-gray-600"
 					>Message</label
 				>
-				<!-- <textarea name="mes" id="mes" cols="30" rows="10"></textarea> -->
-				<input type="text" id="mes" name="mes" /><br /><br />
+				<textarea name="message" placeholder="Message"></textarea>
+				<!-- <input type="text" id="mes" name="mes" /><br /><br /> -->
 				<input
 					type="submit"
 					class="px-5 py-1 m-3 text-white transition-all duration-500 bg-black rounded-md hover:border-black hover:shadow hover:bg-white hover:text-black focus:text-gray-800"
