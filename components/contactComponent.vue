@@ -104,11 +104,11 @@
 				<label for="lmessage" class="text-sm leading-7 text-gray-600"
 					>Message</label
 				>
-				<type="text"
+				<input type="text"
 					id="lmessage"
 					name="lmessage"
 				   
-				/>
+				/><br /><br />
 				<input
 					type="submit"
 					class="px-5 py-1 m-3 text-white transition-all duration-500 bg-black rounded-md hover:border-black hover:shadow hover:bg-white hover:text-black focus:text-gray-800"
