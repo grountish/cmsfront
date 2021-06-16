@@ -89,12 +89,12 @@
 
 
 			
-			<form action="/" method="get" name="phorm" netlify>
-  <label for="fname">First name:</label>
+			<form action="/" method="get" class="mx-auto lg:w-1/2 md:w-2/3" name="phorm" netlify >
+  <label for="fname" class="text-sm leading-7 text-gray-600">First name:</label>
   <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname">Last name:</label>
+  <label for="lname" class="text-sm leading-7 text-gray-600">Last name:</label>
   <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" class="p-5 border border-black" value="Send">
+  <input type="submit" class="px-5 py-1 m-3 text-white transition-all duration-500 bg-black rounded-md hover:border-black hover:shadow hover:bg-white hover:text-black focus:text-gray-800" value="Send">
 </form>
 		</div>
 	</section>
