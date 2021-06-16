@@ -4,7 +4,7 @@
 			<div class="flex flex-col w-full mb-12 text-center">
 				<SanityContent :blocks="content" />
 			</div>
-			 <!-- <form action="POST" class="mx-auto lg:w-1/2 md:w-2/3">
+			<!-- <form action="POST" class="mx-auto lg:w-1/2 md:w-2/3">
 				<div class="flex flex-wrap -m-2">
 					<div class="w-1/2 p-2">
 						<div class="relative">
@@ -86,16 +86,35 @@
 				/>
 			</form>  -->
 
-
-
-			
-			<form action="/" method="get" class="mx-auto lg:w-1/2 md:w-2/3" name="phorm" netlify >
-  <label for="fname" class="text-sm leading-7 text-gray-600">First name:</label>
-  <input type="text" id="fname" name="fname"><br><br>
-  <label for="lname" class="text-sm leading-7 text-gray-600">Last name:</label>
-  <input type="text" id="lname" name="lname"><br><br>
-  <input type="submit" class="px-5 py-1 m-3 text-white transition-all duration-500 bg-black rounded-md hover:border-black hover:shadow hover:bg-white hover:text-black focus:text-gray-800" value="Send">
-</form>
+			<form
+				action="/"
+				method="get"
+				class="mx-auto lg:w-1/2 md:w-2/3"
+				name="phorm"
+				netlify
+			>
+				<label for="fname" class="text-sm leading-7 text-gray-600"
+					>First name:</label
+				>
+				<input type="text" id="fname" name="fname" /><br /><br />
+				<label for="lname" class="text-sm leading-7 text-gray-600"
+					>Last name:</label
+				>
+				<input type="text" id="lname" name="lname" /><br /><br />
+				<label for="lmessage" class="text-sm leading-7 text-gray-600"
+					>Message</label
+				>
+				<textarea
+					id="lmessage"
+					name="lmessage"
+					class="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
+				></textarea>
+				<input
+					type="submit"
+					class="px-5 py-1 m-3 text-white transition-all duration-500 bg-black rounded-md hover:border-black hover:shadow hover:bg-white hover:text-black focus:text-gray-800"
+					value="Send"
+				/>
+			</form>
 		</div>
 	</section>
 </template>
