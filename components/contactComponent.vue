@@ -87,7 +87,7 @@
 			</form>  -->
 
 			<form
-				action="/"
+				action="/sent"
 				method="get"
 				class="mx-auto lg:w-1/2 md:w-2/3"
 				name="phorm"
@@ -101,14 +101,10 @@
 					>Last name:</label
 				>
 				<input type="text" id="lname" name="lname" /><br /><br />
-				<label for="lmessage" class="text-sm leading-7 text-gray-600"
+				<label for="mes" class="text-sm leading-7 text-gray-600"
 					>Message</label
 				>
-				<input type="text"
-					id="lmessage"
-					name="lmessage"
-				   
-				/><br /><br />
+				<input type="text" id="mes" name="mes" /><br /><br />
 				<input
 					type="submit"
 					class="px-5 py-1 m-3 text-white transition-all duration-500 bg-black rounded-md hover:border-black hover:shadow hover:bg-white hover:text-black focus:text-gray-800"
