@@ -89,30 +89,25 @@
 			<form
 				action="/sent"
 				method="get"
-				class="mx-auto lg:w-1/2 md:w-2/3"
+				class="mx-auto text-center lg:w-1/2 md:w-2/3"
 				name="phorm"
 				netlify
 			>
-				<label for="fname" class="text-sm leading-7 text-gray-600"
-					>First name:</label
-				>
-				<input type="text" id="fname" name="fname" /><br /><br />
-				<label for="lname" class="text-sm leading-7 text-gray-600"
-					>Last name:</label
-				>
-				<input type="text" id="lname" name="lname" /><br /><br />
-				<label for="message" class="text-sm leading-7 text-gray-600"
-					>Message</label
-				>
-				<textarea name="message" placeholder="Message"></textarea>
+				
+				<input type="text" id="fname" name="fname" placeholder="Name" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" /><br /><br />
+				
+				<input type="text" id="lname" name="lname" placeholder="Email" class="w-full px-3 py-1 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200" /><br /><br />
+				
+				<textarea name="message" placeholder="Message" class="w-full h-32 px-3 py-1 text-base leading-6 text-gray-700 transition-colors duration-200 ease-in-out bg-gray-100 bg-opacity-50 border border-gray-300 rounded outline-none resize-none focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"></textarea>
 				<!-- <input type="text" id="mes" name="mes" /><br /><br /> -->
 				<input
 					type="submit"
-					class="px-5 py-1 m-3 text-white transition-all duration-500 bg-black rounded-md hover:border-black hover:shadow hover:bg-white hover:text-black focus:text-gray-800"
+					class="px-8 py-3 mx-auto my-3 text-white transition-all duration-500 bg-black rounded-md hover:border-black hover:shadow hover:bg-white hover:text-black focus:text-gray-800"
 					value="Send"
 				/>
 			</form>
 		</div>
+		
 	</section>
 </template>
 

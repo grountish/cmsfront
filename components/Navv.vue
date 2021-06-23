@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="absolute top-0 z-10 flex flex-wrap items-center justify-between w-full px-10 py-1 bg-white"
+    class="absolute top-0 z-10 flex flex-wrap items-center justify-between w-full px-10 py-1 bg-white "
   >
     <div class="flex items-center flex-shrink-0 mr-6 text-white">
       <NuxtLink
@@ -37,57 +37,65 @@
       ]"
       id="nav-content"
     >
-      <ul id="link-list"
+      <ul
+        id="link-list"
         :class="[
           linkse ? ' opacity-100 ' : ' opacity-0 sm:hidden  ',
           'pt-4 lg:pt-0 lg:opacity-100 list-reset lg:flex justify-end flex-1 items-center uppercase text-xs text-PrimaryGreen',
         ]"
       >
-       
+        <button @click="changeEs" class="px-3 mx-3 text-black border">ES</button>
+        <button @click="changeEn" class="px-3 mx-3 text-black border">EN</button>
 
-        <div v-for="(lin,ind) in xtraLinks" :key="lin.name">
+        <div v-for="(lin, ind) in xtraLinks" :key="lin.name">
           <li class="mr-3">
             <NuxtLink
-              :class="[ind==0?'opacity-0':'inline-block px-4 py-2 no-underline transition-all duration-200 hover:text-green-900']"
+              :class="[
+                ind == 0
+                  ? 'opacity-0'
+                  : 'inline-block px-4 py-2 no-underline transition-all duration-200 hover:text-green-900',
+              ]"
               :to="'/x/' + lin.name"
               >{{ lin.name }}</NuxtLink
             >
-           
           </li>
         </div>
-      
-        
       </ul>
     </div>
   </nav>
 </template>
 
 <script>
-import { groq } from "@nuxtjs/sanity";
-const query = groq`*[_type=="Page"]`;
+import { groq } from '@nuxtjs/sanity'
+const query = groq`*[_type=="Page"]`
 
 export default {
   data: () => ({
     toggle: false,
-    xtraLinks: "",
+    xtraLinks: '',
     linkse: false,
   }),
   methods: {
     toggleNav() {
-      this.toggle = !this.toggle;
+      this.toggle = !this.toggle
       this.linkse
         ? (this.linkse = !this.linkse)
         : setTimeout(() => {
-            this.linkse = !this.linkse;
-          }, 300);
+            this.linkse = !this.linkse
+          }, 300)
+    },
+    changeEn() {
+      this.$store.commit('SET_lang', 'en')
+    },
+    changeEs() {
+      this.$store.commit('SET_lang', 'es')
     },
   },
   async fetch() {
-    const xtraLinks = await this.$sanity.fetch(query);
-    this.xtraLinks = xtraLinks;
+    const xtraLinks = await this.$sanity.fetch(query)
+    this.xtraLinks = xtraLinks
   },
-  
-};
+}
 </script>
 
 <style>

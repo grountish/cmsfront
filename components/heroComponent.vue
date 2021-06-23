@@ -1,25 +1,24 @@
 <template>
-	<div
-		class="container grid w-screen h-screen min-w-full fadeIn place-items-center"
-		:style="{
-			backgroundImage: 'url(' + urlFor(background.asset._ref) + ')',
-		}"
-	>
-	
-		<div
-			class="flex flex-col items-start justify-center w-full px-6 pt-12 pb-24 text-center lg:w-2/3"
-		>
-			<SanityContent :blocks="text" class="text-2xl" />
+  <div
+    v-if="background"
+    class="container grid w-screen h-screen min-w-full fadeIn place-items-center"
+    :style="{
+      backgroundImage: 'url(' + urlFor(background.asset._ref) + ')',
+    }"
+  >
+    <div
+      class="flex flex-col items-start justify-center w-full px-6 pt-12 pb-24 text-center lg:w-2/3"
+    >
+      <SanityContent :blocks="returnText(text)" class="text-4xl" />
 
-			<a
-				:href="button.link"
-				class="p-4 m-auto my-5 border border-black scaleUp"
-			>
-				{{ button.text }}
-			</a>
-		</div>
-	
-	</div>
+      <a
+        :href="button.link"
+        class="p-4 m-auto my-5 border border-black scaleUp"
+      >
+        {{ returnText(button.text)}}
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -37,10 +36,16 @@ const builder = imageUrlBuilder(client)
 export default {
 	name: 'htmlComponent',
 	props: ['text', 'background', 'button'],
+  
 	methods: {
 		urlFor(source) {
 			return builder.image(source)
 		},
+    returnText(text){
+    return text[this.$store.state.lang]}
 	},
+  computed:{
+    
+  }
 }
 </script>

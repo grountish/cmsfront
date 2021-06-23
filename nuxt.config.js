@@ -3,7 +3,7 @@ export default {
 	target: 'static',
 
 	head: {
-		title: 'NTT-Template',
+		title: 'CMS Project',
 		target: 'static',
 		meta: [
 			{ charset: 'utf-8' },
@@ -14,12 +14,10 @@ export default {
 			{
 				hid: 'description',
 				name: 'description',
-				content: `
-							A Template for Nuxt.js + Tailwind CSS + Three.js Projects.
-						`,
+				content: `CMS Project`,
 			},
 		],
-
+		
 		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
 	},
 	
@@ -38,8 +36,6 @@ export default {
 		// https://go.nuxtjs.dev/tailwindcss
 		'@nuxtjs/tailwindcss',
 		'nuxt-compress',
-		
-
 	],
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
@@ -67,9 +63,7 @@ export default {
 	axios: {},
 
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
-	build: {
-		transpile: ['gsap']
-	},
+	
 
 	// GSAP
 
