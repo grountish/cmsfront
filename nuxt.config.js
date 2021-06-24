@@ -36,6 +36,7 @@ export default {
 		// https://go.nuxtjs.dev/tailwindcss
 		'@nuxtjs/tailwindcss',
 		'nuxt-compress',
+		'nuxt-build-optimisations',
 	],
 
 	// Modules (https://go.nuxtjs.dev/config-modules)
@@ -58,7 +59,9 @@ export default {
 			},
 		],
 	],
-
+	optimizedImages: {
+		optimizeImages: true
+	  },
 	// Axios module configuration (https://go.nuxtjs.dev/config-axios)
 	axios: {},
 

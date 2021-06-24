@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="absolute top-0 z-10 flex flex-wrap items-center justify-between w-full px-10 py-1 bg-white "
+    class="top-0 z-10 flex flex-wrap items-center justify-between w-full px-10 py-1 "
   >
     <div class="flex items-center flex-shrink-0 mr-6 text-white">
       <NuxtLink
@@ -94,7 +94,35 @@ export default {
   async fetch() {
     const xtraLinks = await this.$sanity.fetch(query)
     this.xtraLinks = xtraLinks
-  },
+  },mounted(){
+    let lastScrollTop = 30
+    let nav = document.getElementsByTagName('nav')[0]
+
+    document.addEventListener(
+      'scroll',
+      () => {
+        let st = window.pageYOffset || document.documentElement.scrollTop
+        if (st == 0) {
+          nav.classList.add('transparent')
+        }
+
+        if (st > lastScrollTop) {
+          nav.classList.remove('is-floating')
+          nav.classList.add('is-not')
+        }
+        if (st < lastScrollTop && st > 0) {
+          nav.classList.remove('is-not')
+          nav.classList.add('is-floating')
+        }
+        if (st == 0) {
+          nav.classList.add('transparent')
+          nav.classList.remove('is-floating')
+        }
+        lastScrollTop = st <= 0 ? 0 : st
+      },
+      false
+    )
+  }
 }
 </script>
 
@@ -113,5 +141,37 @@ a.nuxt-link-exact-active {
 }
 .logo {
   border-bottom: none !important;
+}
+@keyframes slide-nav-down {
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-nav-up {
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.is-floating {
+  background-color: rgba(255, 255, 255, .87) !important;
+  transform: translateY(-100%);
+  animation: slide-nav-down 0.5s ease;
+  animation-fill-mode: both;
+  opacity: 1;
+}
+
+.is-not {
+  opacity: 0;
+}
+
+nav {
+  transition: all 0.5s;
+  position: fixed;
+  top: 0;
+}
+
+.transparent {
+  background: transparent;
 }
 </style>

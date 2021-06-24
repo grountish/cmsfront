@@ -1,9 +1,8 @@
 <template>
   <div
     v-if="background"
-    class="container grid w-screen h-screen min-w-full fadeIn place-items-center"
-    :style="{
-      backgroundImage: 'url(' + urlFor(background.asset._ref) + ')',
+    class="grid w-screen h-screen min-w-full bg-cover  fadeIn place-items-center"
+    :style="{backgroundImage: 'url(' + urlFor(background.asset._ref) + ')',
     }"
   >
     <div

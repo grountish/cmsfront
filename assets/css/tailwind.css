@@ -27,50 +27,6 @@
 
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-.hidescrollbar {
-
-	-ms-overflow-style: none;
-	/* IE and Edge */
-	scrollbar-width: none;
-	/* Firefox */
-
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.hidescrollbar::-webkit-scrollbar {
-
-	display: none;
-
-}
-
-/* customize scrollbar */
-::-webkit-scrollbar {
-
-	width: 10px;
-	height: 10px;
-
-}
-
-::-webkit-scrollbar-track {
-
-	background: rgba(86, 182, 214, 0.347);
-
-}
-
-::-webkit-scrollbar-thumb {
-
-	background: rgba(57, 36, 36, 0.925);
-	border-radius: 10px;
-
-}
-
-::-webkit-scrollbar-thumb:hover {
-
-	background: rgb(214, 86, 144);
-
-}
-
 /* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap'); */
 
 
@@ -99,3 +55,12 @@ h1{
 	font-size: 1.7em;
 	margin-bottom: 7px;
 }
+body::-webkit-scrollbar {
+	display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  body {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+  }
