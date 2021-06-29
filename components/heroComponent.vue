@@ -1,14 +1,14 @@
 <template>
   <div
     v-if="background"
-    class="grid w-screen h-screen min-w-full bg-cover  fadeIn place-items-center"
+    class="grid w-screen h-screen min-w-full bg-cover fadeIn place-items-center"
     :style="{backgroundImage: 'url(' + urlFor(background.asset._ref) + ')',
     }"
   >
     <div
       class="flex flex-col items-start justify-center w-full px-6 pt-12 pb-24 text-center lg:w-2/3"
     >
-      <SanityContent :blocks="returnText(text)" class="text-4xl" />
+      <SanityContent :blocks="returnText(text)" class="mx-auto text-4xl" />
 
       <a
         :href="button.link"
