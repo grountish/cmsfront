@@ -2,6 +2,12 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+*{
+	/* font-style: 'Josefin+Sans'; */
+	font-family: 'Josefin Sans';
+	font-weight: 900;
+}
+
 .btn:focus {
 
 	outline: 0;

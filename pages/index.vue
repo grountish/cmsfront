@@ -29,6 +29,7 @@ export default {
  
   data() {
     return {
+     
       serializers: {
         types: {
           image: CustomComponent,
@@ -50,8 +51,8 @@ export default {
   },
   async asyncData({ $sanity, route }) {
     const xtras = await $sanity.fetch(query);
-    let filx = xtras.filter((x) => x.name == 'index');
-    const page = filx[0];
+    let filx = xtras.find((x) => x.name == 'index');
+    const page = filx;
     return { page };
   } 
 };

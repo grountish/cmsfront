@@ -42,6 +42,7 @@ export default {
 	// Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
 	buildModules: [
 		// https://go.nuxtjs.dev/tailwindcss
+		'@nuxtjs/google-fonts',
 		'@nuxtjs/tailwindcss',
 		'nuxt-compress',
 		'nuxt-build-optimisations',
@@ -54,6 +55,7 @@ export default {
 		// https://go.nuxtjs.dev/pwa
 
 		'@nuxtjs/sanity/module',
+	
 
 		[
 			'nuxt-compress',
@@ -108,7 +110,17 @@ export default {
 	},
 	// Axios module configuration (https://go.nuxtjs.dev/config-axios)
 	axios: {},
-
+	googleFonts: {
+		prefetch: true,
+		preconnect: true,
+		preload: true,
+	
+		families: {
+		  
+		  'Josefin+Sans': { wght: [100, 400]},
+		  
+		}
+	  },
 	// Build Configuration (https://go.nuxtjs.dev/config-build)
 
 
