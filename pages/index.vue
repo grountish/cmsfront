@@ -54,8 +54,6 @@ export default {
     let filx = xtras.find((x) => x.name == 'index');
     const page = filx;
     return { page };
-  },mounted () {
-    this.$nuxt.refresh
   }
 };
 </script>
