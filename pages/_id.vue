@@ -19,7 +19,7 @@ import textCallImgComponent from '../components/textCallImgComponent'
 import richTextComponent from '../components/richTextComponent.vue'
 import marqueeComponent from '../components/marqueeComponent.vue'
 import blockHightlightComponent from '../components/blockHightlightComponent.vue'
-import contactComponent from '../components/contactComponent.vue'
+
 const query = groq`*[_type=="Page"]`
 
 export default {
@@ -34,7 +34,6 @@ export default {
           richText: richTextComponent,
           marquee: marqueeComponent,
           blockHighlight: blockHightlightComponent,
-          contact: contactComponent,
         },
         marks: {
           underline: ItalicComponent,
@@ -45,8 +44,8 @@ export default {
   },
   async asyncData({ $sanity, route }) {
     const xtras = await $sanity.fetch(query)
-    let filx = xtras.find((x) => x.name == 'index')
-    const page = filx
+    let filx = xtras.filter((x) => x.name == route.params.id)
+    const page = filx[0]
     return { page }
   },
 }
