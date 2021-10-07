@@ -9,7 +9,3 @@ export default {
 
 }
 </script>
-//aa
-<style>
-
-</style>
